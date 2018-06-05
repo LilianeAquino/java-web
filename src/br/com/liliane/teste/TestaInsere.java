@@ -1,0 +1,28 @@
+package br.com.liliane.teste;
+
+import java.util.Calendar;
+
+import br.com.liliane.dao.ContatoDao;
+import br.com.liliane.modelo.Contato;
+
+
+
+public class TestaInsere {
+
+	public static void main(String[] args) throws Exception {
+		
+	       Contato contato = new Contato();
+	       contato.setNome("Caelum");
+	       contato.setEmail("contato@caelum.com.br");
+	       contato.setEndereco("R. Vergueiro 3185 cj57");
+	       contato.setDataNascimento(Calendar.getInstance());
+
+	       ContatoDao dao = new ContatoDao();
+
+	       dao.adiciona(contato);
+
+	       System.out.println("Gravado!");
+
+	}
+
+}
